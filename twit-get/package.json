@@ -1,0 +1,15 @@
+{
+  "name": "twit-get",
+  "version": "0.0.1",
+  "description": "A getter of twitter data",
+  "main": "index.js",
+  "dependencies": {
+    "twitter": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jirwin",
+  "license": "ISC"
+}
