@@ -13,4 +13,3 @@ source ~/.bashrc
 # install stable
 nvm install stable
 nvm alias default stable
-nvm use stable

@@ -3,10 +3,10 @@ var Twitter = require('twitter');
 var keywords = '#blizzard,#starcraft,#overwatch,#diablo,#sc2,#d3,#worldofwarcraft,#warcraft,#hearthstone'
  
 var client = new Twitter({
-  consumer_key: 'zVAaAZg1krSUjeyTXMrRHXxAO',
-  consumer_secret: 'eto4JhbneNlnGYhnrG8TZEwP5uWJW61RnR8pQFaM4cHD5Y6b90',
-  access_token_key: '23265241-BoZzLl2iSY3d0iy6l923RLJsplptcebmEoaIEcSkT',
-  access_token_secret: 'hM7dn8jJgrtD3EfkkegUnnbN1a48KVWtAg50WMgTzFT5k'
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: ''
 });
 
 client.stream('statuses/filter', {track: keywords, language: 'en'}, function(stream) {
