@@ -12,7 +12,10 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/centos-6.7"
+  config.vm.define "twitget" do |twitget|
+    twitget.vm.box = "bento/centos-6.7"
+    twitget.vm.provision "shell", path: 'bootstrap-node.sh', privileged: false 
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -68,4 +71,6 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+
 end
