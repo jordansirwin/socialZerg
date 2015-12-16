@@ -1,5 +1,5 @@
 var Twitter = require('twitter');
-var Config = require('config.json');
+var Config = require('./config');
 
 var keywords = '#blizzard,#starcraft,#overwatch,#diablo,#sc2,#d3,#worldofwarcraft,#warcraft,#hearthstone'
  
