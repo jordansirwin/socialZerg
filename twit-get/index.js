@@ -1,7 +1,5 @@
 var Twitter = require('twitter');
 var Config = require('./config');
-
-var keywords = '#blizzard,#starcraft,#overwatch,#diablo,#sc2,#d3,#worldofwarcraft,#warcraft,#hearthstone'
  
 var client = new Twitter({
   consumer_key: Config.twitter.consumer_key,
@@ -10,9 +8,9 @@ var client = new Twitter({
   access_token_secret: Config.twitter.access_token_secret
 });
 
-client.stream('statuses/filter', {track: keywords, language: 'en'}, function(stream) {
+client.stream('statuses/filter', {track: Config.twitter.track, language: config.twitter.language}, function(stream) {
   stream.on('data', function(tweet) {
-    console.log(tweet.created_at + ": " + tweet.text);
+    console.log(tweet.created_at + " : " + tweet.text);
   });
  
   stream.on('error', function(error, data, response) {re
