@@ -4,6 +4,8 @@
 sudo yum -y update yum
 sudo rm -rf /var/cache/yum/*
 
+mkdir /vagrant/puppet/modules
+
 # add modules if not already added
 if [ ! -d /vagrant/puppet/modules/java ]; then 
   puppet module install puppetlabs-java --modulepath /vagrant/puppet/modules
