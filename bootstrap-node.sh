@@ -11,5 +11,5 @@ echo 'source ~/.nvm/nvm.sh' >> ~/.bashrc
 source ~/.bashrc 
 
 # install stable
-nvm install stable
+nvm install stable 2>/dev/null
 nvm alias default stable
