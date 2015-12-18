@@ -36,8 +36,5 @@ node_modules
 # Vagrant
 .vagrant
 
-# Puppet
-puppet/modules
-
 # Config
 config.js
