@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # gets required puppet modules
 
-sudo yum -y update yum
-sudo rm -rf /var/cache/yum/*
+# open firewall
+sudo iptables -I INPUT 1 -p tcp --dport 9200 -j ACCEPT
+service iptables save
 
-# make sure modules dir exists
-mkdir puppet/modules
 
 # add modules if not already added
 if [ ! -d /vagrant/puppet/modules/java ]; then 
